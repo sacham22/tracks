@@ -117,7 +117,8 @@ class TemplateParser
   end
 
   def parse(file, poster)
-    while line = file.gets
+    #Code Climate suggested to use == in line 120
+    while line == file.gets
       line = line.strip
 
       # skip line if empty or comment
