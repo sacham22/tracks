@@ -1,5 +1,19 @@
 languages:
   Ruby: true
 exclude_paths:
-- "app/helpers/todos_helper.rb"
--"app/helpers/*"
+-app/helpers/**
+engines:
+  # ... CONFIG CONTENT ...
+  brakeman:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    exclude_fingerprints:
+    - ca7ff69feaae075d63d058c73319628e5208c76cb716319f528564bf67e85858
+# ... CONFIG CONTENT ...
+
+engines:
+  # ... CONFIG CONTENT ...
+  duplication:
+    # ... CONFIG CONTENT ...
+    enabled: false
+# ... CONFIG CONTENT ...
