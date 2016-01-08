@@ -2,7 +2,7 @@
 languages:
   Ruby: true
 exclude_paths:
--app/helpers/**
+- app/helpers/**
 #exclude the security issue model atribute used in file name 
 engines:
   # ... CONFIG CONTENT ...
