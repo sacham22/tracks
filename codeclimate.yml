@@ -1,7 +1,9 @@
+#exclude app/helpers directory
 languages:
   Ruby: true
 exclude_paths:
 -app/helpers/**
+#exclude the security issue model atribute used in file name 
 engines:
   # ... CONFIG CONTENT ...
   brakeman:
@@ -10,10 +12,19 @@ engines:
     exclude_fingerprints:
     - ca7ff69feaae075d63d058c73319628e5208c76cb716319f528564bf67e85858
 # ... CONFIG CONTENT ...
-
+#turn off duplication for js only
 engines:
   # ... CONFIG CONTENT ...
   duplication:
     # ... CONFIG CONTENT ...
     enabled: false
+# ... CONFIG CONTENT ...
+#disable assignment in a conditional
+engines:
+  # ... CONFIG CONTENT ...
+  rubocop:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    exclude_fingerprints:
+    - 17508497029fae2b581c15a307fe6c65
 # ... CONFIG CONTENT ...
